@@ -561,10 +561,10 @@ const Events = () => {
   const navigate = useNavigate();
 
   const events = [
-    { id: 1, title: "Hackathon", desc: "48 hours of code.", path: "/events/event1", icon: "💻" },
-    { id: 2, title: "Robo Wars", desc: "Metal crushes metal.", path: "/events/event2", icon: "🤖" },
-    { id: 3, title: "Design Derby", desc: "UI/UX Showdown.", path: "/events/event3", icon: "🎨" },
-    { id: 4, title: "Tech Quiz", desc: "Test your knowledge.", path: "/events/event4", icon: "🧠" },
+    { id: 1, title: "Hackathon", desc: "desc.", path: "/events/event1", icon: "💻" },
+    { id: 2, title: "Debugging", desc: "desc.", path: "/events/event2", icon: "🤖" },
+    { id: 3, title: "Event", desc: "desc.", path: "/events/event3", icon: "🎨" },
+    { id: 4, title: "Event ", desc: "desc.", path: "/events/event4", icon: "🧠" },
   ];
 
   return (
