@@ -428,7 +428,7 @@ const Navbar = () => {
 
 // --- HERO SECTION ---
 const Hero = () => {
-  const { colors , theme } = useTheme();
+  const { colors, theme } = useTheme();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
 
@@ -766,7 +766,7 @@ function App() {
       <GlobalStyles />
       <CustomCursor /> {/* Premium Touch */}
 
-      <Router>
+      <Router basename="/">
         <div className="app-container" style={{ position: 'relative' }}>
           <Navbar />
 
