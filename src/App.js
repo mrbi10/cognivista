@@ -42,10 +42,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events/event1" element={<Event1 />} />
-          <Route path="/events/event2" element={<Event2 />} />
-          <Route path="/events/event3" element={<Event3 />} />
-          <Route path="/events/event4" element={<Event4 />} />
+          <Route path="/events/presentia" element={<Event1 />} />
+          <Route path="/events/hackgent" element={<Event2 />} />
+          <Route path="/events/codecure" element={<Event3 />} />
+          <Route path="/events/brainstromx" element={<Event4 />} />
         </Routes>
 
         <Footer />

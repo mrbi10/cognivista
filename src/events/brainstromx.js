@@ -29,7 +29,7 @@ const itemVariants = {
   }
 };
 
-const Event1 = () => {
+const Event4 = () => {
   const vantaRef = useRef(null);
   const navigate = useNavigate();
   const vantaEffect = useRef(null);
@@ -105,7 +105,7 @@ const Event1 = () => {
                 <span className="terminal-text">ID: ESC_LOG_77</span>
                 <div className="status-badge"><span className="pulse-dot" /> SYSTEM_LIVE</div>
               </div>
-              <div className="nav-group logo-main">PRESENTIA </div>
+              <div className="nav-group logo-main">BRAINSTORM</div>
               <div className="nav-group text-right">
                 <span className="terminal-text">PORT: 8081</span>
               </div>
@@ -140,22 +140,19 @@ const Event1 = () => {
               {/* Right Side: Mission Intel */}
               <motion.div variants={itemVariants} className="mission-intel">
                 <div className="intel-header">
-                  <h2 className="intel-title">PRESENTIA</h2>
-                  <p className="intel-desc">PRESENTIA is more than a presentation event; it is an experience that sharpens perspective, builds confidence, and highlights the power of ideas when presented with purpose.</p>
+                  <h2 className="intel-title">BRAINSTORM X</h2>
+                  <p className="intel-desc">BRAINSTORM X is an innovation-driven event that challenges participants to think creatively, solve strategically, and present confidently.</p>
                 </div>
 
-               <div className="intel-stats">
-  <a
-    href="tel:8870138290"
-    className="stat-card cursor-pointer no-underline text-inherit"
-  >
-    <span className="label">CONTACT</span>
-    <span className="value text-cyan">8870138290</span>
-  </a>
-</div>
-
-
-
+                <div className="intel-stats">
+                  <a
+                    href="tel:8870138290"
+                    className="stat-card cursor-pointer no-underline text-inherit"
+                  >
+                    <span className="label">CONTACT</span>
+                    <span className="value text-cyan">9940324922</span>
+                  </a>
+                </div>
                 <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (
                     <div key={step} className="round-node">
@@ -184,7 +181,7 @@ const Event1 = () => {
                 <button
                   className="btn-secondary-glass"
                   onClick={() =>
-                    window.open("/event_pdf_1.pdf", "_blank")
+                    window.open("/event_pdf_brainstromx.pdf", "_blank")
                   }
                 >
                   KNOW MORE
@@ -234,8 +231,7 @@ const Event1 = () => {
           z-index: 3; pointer-events: none;
         }
 
-
-        .stat-card {
+         .stat-card {
   text-decoration: none;
   color: inherit;
 }
@@ -245,6 +241,7 @@ const Event1 = () => {
 .stat-card:active {
   text-decoration: none;
 }
+
 
         .interface-layer {
           position: relative; z-index: 10;
@@ -306,6 +303,17 @@ const Event1 = () => {
         .power-footer { display: flex; justify-content: space-between; align-items: center; }
         .action-cluster { display: flex; gap: 20px; }
         
+        .stat-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stat-card:hover,
+.stat-card:focus,
+.stat-card:active {
+  text-decoration: none;
+}
+
        
         @media (max-width: 1024px) {
           .hero-grid { grid-template-columns: 1fr; }
@@ -400,4 +408,4 @@ const Event1 = () => {
   );
 };
 
-export default memo(Event1);
+export default memo(Event4);

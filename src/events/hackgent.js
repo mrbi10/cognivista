@@ -29,7 +29,7 @@ const itemVariants = {
   }
 };
 
-const Event3 = () => {
+const Event2 = () => {
   const vantaRef = useRef(null);
   const navigate = useNavigate();
   const vantaEffect = useRef(null);
@@ -105,7 +105,7 @@ const Event3 = () => {
                 <span className="terminal-text">ID: ESC_LOG_77</span>
                 <div className="status-badge"><span className="pulse-dot" /> SYSTEM_LIVE</div>
               </div>
-              <div className="nav-group logo-main">CODE CURE</div>
+              <div className="nav-group logo-main">HACKGENT</div>
               <div className="nav-group text-right">
                 <span className="terminal-text">PORT: 8081</span>
               </div>
@@ -140,21 +140,20 @@ const Event3 = () => {
               {/* Right Side: Mission Intel */}
               <motion.div variants={itemVariants} className="mission-intel">
                 <div className="intel-header">
-                  <h2 className="intel-title">CODE CURE</h2>
-                  <p className="intel-desc">CODE CURE is an opportunity to use technology responsibly — to think, build, and innovate with purpose.</p>
+                  <h2 className="intel-title">HACKGENT</h2>
+                  <p className="intel-desc">HACKGENT is about pushing boundaries, experimenting boldly, and creating solutions that matter.</p>
                 </div>
 
-                 <div className="intel-stats">
-  <a
-    href="tel:8870138290"
-    className="stat-card cursor-pointer no-underline text-inherit"
-  >
-    <span className="label">CONTACT</span>
-    <span className="value text-cyan"> 9445521080</span>
-  </a>
-</div>
+                <div className="intel-stats">
+                  <a
+                    href="tel:8870138290"
+                    className="stat-card cursor-pointer no-underline text-inherit"
+                  >
+                    <span className="label">CONTACT</span>
+                    <span className="value text-cyan">9884171286</span>
+                  </a>
+                </div>
 
-               
 
                 <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (
@@ -184,7 +183,7 @@ const Event3 = () => {
                 <button
                   className="btn-secondary-glass"
                   onClick={() =>
-                    window.open("/event_pdf_3.pdf", "_blank")
+                    window.open("/event_pdf_hackgent.pdf", "_blank")
                   }
                 >
                   KNOW MORE
@@ -234,8 +233,7 @@ const Event3 = () => {
           z-index: 3; pointer-events: none;
         }
 
-
-         .stat-card {
+     .stat-card {
   text-decoration: none;
   color: inherit;
 }
@@ -245,6 +243,7 @@ const Event3 = () => {
 .stat-card:active {
   text-decoration: none;
 }
+
 
         .interface-layer {
           position: relative; z-index: 10;
@@ -270,18 +269,6 @@ const Event3 = () => {
           display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
           padding: 40px 0;
         }
-
-        .stat-card {
-  text-decoration: none;
-  color: inherit;
-}
-
-.stat-card:hover,
-.stat-card:focus,
-.stat-card:active {
-  text-decoration: none;
-}
-
 
         /* --- The Poster --- */
         .poster-wrapper { position: relative; transform-style: preserve-3d; }
@@ -412,4 +399,4 @@ const Event3 = () => {
   );
 };
 
-export default memo(Event3);
+export default memo(Event2);

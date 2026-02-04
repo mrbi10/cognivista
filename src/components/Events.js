@@ -5,7 +5,7 @@ const EVENTS_DATA = [
   {
     title: 'PRESENTIA',
     description: 'Presented by IT',
-    path: '/events/event1',
+    path: '/events/presentia',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ const EVENTS_DATA = [
   {
     title: 'HACKGENT',
     description: 'Presented by ADS',
-    path: '/events/event2',
+    path: '/events/hackgent',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const EVENTS_DATA = [
   {
     title: 'CODE CURE',
     description: 'Presented by CSE',
-    path: '/events/event3',
+    path: '/events/codecure',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const EVENTS_DATA = [
   {
     title: 'BRAINSTROM X',
     description: 'Presented by CSBS',
-    path: '/events/event4',
+    path: '/events/brainstromx',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
