@@ -1,0 +1,21 @@
+/* Deepens the theme and ensures background is pitch black at the edges */
+.app {
+  background: radial-gradient(circle at center, transparent 0%, #020617 90%) !important;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for the interactive background layering */
+#tsparticles {
+  position: fixed !important;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none; /* Allows mouse interactions to pass through to buttons */
+}
+
+/* Adds a subtle neon glow to your main container */
+.hero-container {
+  background: transparent;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+}

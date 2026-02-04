@@ -105,9 +105,9 @@ const Event4 = () => {
                 <span className="terminal-text">ID: ESC_LOG_77</span>
                 <div className="status-badge"><span className="pulse-dot" /> SYSTEM_LIVE</div>
               </div>
-              <div className="nav-group logo-main">Event name</div>
+              <div className="nav-group logo-main">BRAINSTORM</div>
               <div className="nav-group text-right">
-                <span className="terminal-text">PORT: 8080</span>
+                <span className="terminal-text">PORT: 8081</span>
               </div>
             </motion.nav>
 
@@ -140,21 +140,19 @@ const Event4 = () => {
               {/* Right Side: Mission Intel */}
               <motion.div variants={itemVariants} className="mission-intel">
                 <div className="intel-header">
-                  <h2 className="intel-title">OBJECTIVE: MAINFRAME</h2>
-                  <p className="intel-desc">The city's firewall is failing. Assemble your squad of 3 and infiltrate the five security layers before the timer hits zero.</p>
+                  <h2 className="intel-title">BRAINSTORM X</h2>
+                  <p className="intel-desc">BRAINSTORM X is an innovation-driven event that challenges participants to think creatively, solve strategically, and present confidently.</p>
                 </div>
 
-                <div className="intel-stats">
-                  <div className="stat-card">
-                    <span className="label">PRIZE POOL</span>
-                    <span className="value">CLASSIFIED</span>
-                  </div>
-                  <div className="stat-card">
-                    <span className="label">THREAT LEVEL</span>
-                    <span className="value text-cyan">CRITICAL</span>
-                  </div>
-                </div>
-
+                 <div className="intel-stats">
+  <a
+    href="tel:8870138290"
+    className="stat-card cursor-pointer no-underline text-inherit"
+  >
+    <span className="label">CONTACT</span>
+    <span className="value text-cyan">9940324922</span>
+  </a>
+</div>
                 <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (
                     <div key={step} className="round-node">
@@ -183,11 +181,7 @@ const Event4 = () => {
                 <button
                   className="btn-secondary-glass"
                   onClick={() =>
-                    window.open(
-                      "https://YOUR_KNOW_MORE_LINK",
-                      "_blank",
-                      "noopener,noreferrer"
-                    )
+                    window.open("/event_pdf_4.pdf", "_blank")
                   }
                 >
                   KNOW MORE
@@ -198,7 +192,7 @@ const Event4 = () => {
                   className="btn-primary-emerald"
                   onClick={() =>
                     window.open(
-                      "https://forms.gle/YOUR_GOOGLE_FORM_LINK",
+                      "https://docs.google.com/forms/d/e/1FAIpQLSc1MpVpAm_CKsNcmI0kRKkY7k31zTK4VpkrVA4HrOH_IvNWVQ/viewform?usp=send_form",
                       "_blank",
                       "noopener,noreferrer"
                     )
@@ -236,6 +230,18 @@ const Event4 = () => {
           background: radial-gradient(circle, rgba(0, 255, 255, 0.08) 0%, transparent 70%);
           z-index: 3; pointer-events: none;
         }
+
+         .stat-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stat-card:hover,
+.stat-card:focus,
+.stat-card:active {
+  text-decoration: none;
+}
+
 
         .interface-layer {
           position: relative; z-index: 10;
@@ -283,7 +289,7 @@ const Event4 = () => {
         .intel-desc { color: #888; line-height: 1.6; max-width: 500px; margin-bottom: 2rem; }
         .intel-stats { display: flex; gap: 30px; margin-bottom: 3rem; }
         .stat-card { border-left: 2px solid #333; padding-left: 20px; }
-        .stat-card .label { display: block; font-size: 0.6rem; color: #555; letter-spacing: 2px; }
+        .stat-card .label { display: block; font-size: 0.6rem; color: #ffffff; letter-spacing: 2px; }
         .stat-card .value { font-size: 1.2rem; font-weight: 700; }
         .text-cyan { color: #00ffff; }
 
@@ -297,6 +303,17 @@ const Event4 = () => {
         .power-footer { display: flex; justify-content: space-between; align-items: center; }
         .action-cluster { display: flex; gap: 20px; }
         
+        .stat-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stat-card:hover,
+.stat-card:focus,
+.stat-card:active {
+  text-decoration: none;
+}
+
        
         @media (max-width: 1024px) {
           .hero-grid { grid-template-columns: 1fr; }

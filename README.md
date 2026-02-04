@@ -1,171 +1,70 @@
-# Cognivista 2026 🎓🚀
+# Getting Started with Create React App
 
-Official website for **Cognivista 2026**, a national-level technical symposium hosted by  
-**Misrimal Navajee Munoth Jain Engineering College (MNMJEC)**.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Built with a premium UI, smooth animations, and a modern dark/light theme experience.
+## Available Scripts
 
-🌐 Live Site: https://cognivista.mnmjec.in
+In the project directory, you can run:
 
----
+### `npm start`
 
-## ✨ Features
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- ⚡ React 19 + React Router v6
-- 🎞️ Framer Motion animations (cinematic transitions)
-- 🌗 Dark / Light theme toggle
-- 🧲 Magnetic buttons & 3D tilt cards
-- ⏳ Live event countdown timer
-- 📱 Fully responsive design
-- 🧭 Smooth in-page navigation
-- 🗺️ Embedded Google Maps for location
-- 🧠 Modular event pages (Hackathon, Robo Wars, etc.)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
----
+### `npm test`
 
-## 🛠️ Tech Stack
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- **Frontend**: React (CRA)
-- **Routing**: react-router-dom
-- **Animations**: framer-motion
-- **Styling**: CSS-in-JS + Glassmorphism
-- **Build Tool**: react-scripts
-- **Hosting**: Static Hosting (GitHub Pages / Hostinger)
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 📁 Project Structure
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-sympo/
-├── public/
-│   ├── index.html
-│   └── _redirects / .htaccess
-├── src/
-│   ├── events/
-│   │   ├── Event1.js
-│   │   ├── Event2.js
-│   │   ├── Event3.js
-│   │   └── Event4.js
-│   ├── App.js
-│   └── index.js
-├── build/
-├── package.json
-└── README.md
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-`
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## 🚀 Getting Started (Local Setup)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### 1️⃣ Clone the repository
-bash
-git clone https://github.com/<your-username>/sympo.git
-cd sympo
-`
+## Learn More
 
-### 2️⃣ Install dependencies
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-bash
-npm install
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-### 3️⃣ Start development server
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-bash
-npm start
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-App will run at:
-👉 [http://localhost:3000](http://localhost:3000)
+### Making a Progressive Web App
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## 📦 Build for Production
+### Advanced Configuration
 
-bash
-npm run build
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
 
-This generates a `build/` folder containing optimized static files.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
----
+### `npm run build` fails to minify
 
-## 🌍 Deployment (Subdomain)
-
-The app is deployed on:
-
-
-https://cognivista.mnmjec.in
-
-
-### Important configurations:
-
-* `homepage` set in `package.json`
-* `BrowserRouter` uses `basename="/"` (subdomain-safe)
-* Rewrite rules added for React Router (SPA support)
-
-Example `.htaccess` (Apache):
-
-apache
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
-
-
----
-
-## 🎨 Theme System
-
-* Default theme: **Dark**
-* Toggle available in Navbar
-* Theme handled via React Context
-* Safe gradient text rendering (no disappearing text on toggle)
-
----
-
-## 📅 Event Date
-
-🗓 **February 13, 2026**
-📍 Misrimal Navajee Munoth Jain Engineering College, Chennai
-
----
-
-## 🤝 Contributors
-
-**Cognivista Tech Team**
-Department of Computer Science & Engineering
-MNMJEC
-
----
-
-## 📜 License
-
-This project is developed for academic and event purposes.
-All rights reserved © 2026 MNMJEC.
-
----
-
-## 📬 Contact
-
-* 📸 Instagram: [https://www.instagram.com/cognivista](https://www.instagram.com/cognivista)
-* 📧 Email: [cognivista@gmail.com](mailto:cognivista@gmail.com)
-* 📍 Location: Chennai, India
-
-
-
----
-
-### If you want next
-I can:
-- tailor this README for **GitHub Pages**
-- add badges (React, Node, License)
-- write a **deployment-only README** for admins
-- make a shorter README for public view
-
-Just tell me 👍
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
