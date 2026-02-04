@@ -85,6 +85,8 @@ const Hero = () => {
           line-height: 1.1;
           margin-bottom: 1.5rem;
           letter-spacing: 2px;
+
+          
           
           /* Gradient Text */
           background: linear-gradient(90deg,  #fff, #00f2fe, #7f30e7, #fff);
@@ -96,6 +98,19 @@ const Hero = () => {
           filter: drop-shadow(0 0 20px rgba(0, 242, 254, 0.4));
           animation: shineMove 6s linear infinite;
         }
+
+        .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 
         /* DESCRIPTION */
         .hero-desc {
@@ -217,20 +232,27 @@ const Hero = () => {
       >
 
         {/* Subtitle */}
-        <motion.h2 variants={itemVariants} className="hero-subtitle">
+        <motion.p variants={itemVariants} className="hero-subtitle">
           LET’S VIBE WITH US
-        </motion.h2>
+        </motion.p>
 
         {/* Main Title */}
-        <motion.h1 variants={itemVariants} className="hero-title">
-          COGNIVISTA'26
+        <motion.h1
+          variants={itemVariants}
+          className="hero-title"
+        >
+          COGNIVISTA’26
+          <span className="sr-only">
+            Cognivista 2026 National Level Technical Symposium at MNMJEC Chennai
+          </span>
         </motion.h1>
 
-        {/* Description */}
-        <motion.h4 variants={itemVariants} className="hero-desc">
-         NATIONAL LEVEL TECH SYMPOSIUM <br className="hidden-mobile" />
-         
-        </motion.h4>
+        <motion.p variants={itemVariants} className="hero-desc">
+          Cognivista 2026 is a National Level Technical Symposium conducted by
+          MNMJEC, Chennai, bringing together students from across Tamil Nadu
+          for technical events, workshops, and innovation.
+        </motion.p>
+
 
         {/* Countdown */}
         <motion.div variants={itemVariants} className="countdown-wrapper">

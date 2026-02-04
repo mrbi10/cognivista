@@ -11,10 +11,10 @@ import Events from './components/Events';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-import Event1 from './events/Event1';
-import Event2 from './events/Event2';
-import Event3 from './events/Event3';
-import Event4 from './events/Event4';
+import Event1 from './events/presentia';
+import Event2 from './events/hackgent';
+import Event3 from './events/codecure';
+import Event4 from './events/brainstromx';
 
 import './styles/App.css';
 import './styles/index.css';
