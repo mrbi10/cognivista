@@ -195,8 +195,7 @@ const Event1 = () => {
                   className="btn-primary-emerald"
                   onClick={() =>
                     window.open(
-                      "https://docs.google.com/forms/d/e/1FAIpQLSc1MpVpAm_CKsNcmI0kRKkY7k31zTK4VpkrVA4HrOH_IvNWVQ/viewform?usp=send_form",
-                      "_blank",
+                      "https://docs.google.com/forms/d/e/1FAIpQLSfzQHJcIZNcZDjQ8FuLSalb0P3-6tYcfTmVdBXKOsAi4Eb_2w/viewform", "_blank",
                       "noopener,noreferrer"
                     )
                   }

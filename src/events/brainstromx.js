@@ -192,8 +192,7 @@ const Event4 = () => {
                   className="btn-primary-emerald"
                   onClick={() =>
                     window.open(
-                      "https://docs.google.com/forms/d/e/1FAIpQLSc1MpVpAm_CKsNcmI0kRKkY7k31zTK4VpkrVA4HrOH_IvNWVQ/viewform?usp=send_form",
-                      "_blank",
+                      "https://docs.google.com/forms/d/e/1FAIpQLSdPm_-nUh382tIpJLoKqXGg27HbKEcCbyId4iFiCC8p3c6Obg/viewform", "_blank",
                       "noopener,noreferrer"
                     )
                   }
