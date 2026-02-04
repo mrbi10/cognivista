@@ -250,7 +250,7 @@ const Hero = () => {
         <motion.p variants={itemVariants} className="hero-desc">
           Cognivista 2026 is a National Level Technical Symposium conducted by
           MNMJEC, Chennai, bringing together students from across Tamil Nadu
-          for technical events, workshops, and innovation.
+          for technical events and innovation.
         </motion.p>
 
 
