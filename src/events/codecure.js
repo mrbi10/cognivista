@@ -8,6 +8,8 @@ import {
   useMotionValue
 } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import codecureimg from "../../src/assets/images/codecure.png"
+
 
 
 // --- Advanced Animation Profiles ---
@@ -44,6 +46,21 @@ const Event3 = () => {
 
   const rotateX = useTransform(springY, [-500, 500], [10, -10]);
   const rotateY = useTransform(springX, [-500, 500], [-10, 10]);
+
+  useEffect(() => {
+    if (window.matchMedia("(hover: none)").matches) return;
+
+    const handleMouseMove = (e) => {
+      const moveX = e.clientX - window.innerWidth / 2;
+      const moveY = e.clientY - window.innerHeight / 2;
+      mouseX.set(moveX);
+      mouseY.set(moveY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -101,14 +118,14 @@ const Event3 = () => {
           >
             {/* 1. HUD TOP BAR */}
             <motion.nav variants={itemVariants} className="hud-nav">
-              <div className="nav-group">
+              {/* <div className="nav-group">
                 <span className="terminal-text">ID: ESC_LOG_77</span>
                 <div className="status-badge"><span className="pulse-dot" /> SYSTEM_LIVE</div>
-              </div>
+              </div> */}
               <div className="nav-group logo-main">CODE CURE</div>
-              <div className="nav-group text-right">
+              {/* <div className="nav-group text-right">
                 <span className="terminal-text">PORT: 8081</span>
-              </div>
+              </div> */}
             </motion.nav>
 
             {/* 2. MAIN CONTENT GRID */}
@@ -123,14 +140,14 @@ const Event3 = () => {
                 <div className="poster-frame" ref={posterRef}>
                   <div className="poster-glitch-layers">
                     <img
-                      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                      src={codecureimg}
                       alt="Event Hero"
                       className="poster-img"
                     />
                     <div className="scanline" />
                     <div className="ui-overlay-elements">
                       <div className="corner-tl" /> <div className="corner-br" />
-                      <div className="floating-data">0x4F...E2</div>
+
                     </div>
                   </div>
                 </div>
@@ -141,8 +158,29 @@ const Event3 = () => {
               <motion.div variants={itemVariants} className="mission-intel">
                 <div className="intel-header">
                   <h2 className="intel-title">CODE CURE</h2>
-                  <p className="intel-desc">CODE CURE is an opportunity to use technology responsibly — to think, build, and innovate with purpose.</p>
+                  <p className="intel-desc">Code Cure is a coding event where you get code with mistakes and fix it before time ends. You must find the errors and make the program run correctly.
+
+                  </p>
                 </div>
+                {/* ===== ADD THIS BLOCK RIGHT HERE ===== */}
+                <div className="intel-event-details">
+                  <div className="detail-row">
+                    <span className="detail-label">DATE</span>
+                    <span className="detail-value">13 <sup>th</sup> Feb 2026</span>
+                  </div>
+
+                  <div className="detail-row">
+                    <span className="detail-label">TIME</span>
+                    <span className="detail-value">10:30 AM – 12:00 PM</span>
+                  </div>
+
+                  <div className="detail-row">
+                    <span className="detail-label">VENUE</span>
+                    <span className="detail-value"> IP & DBMS LAB</span>
+                  </div>
+                </div>
+                {/* ===== END BLOCK ===== */}
+
 
                 <div className="intel-stats">
                   <a
@@ -156,7 +194,7 @@ const Event3 = () => {
 
 
 
-                <div className="round-sequence">
+                {/* <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (
                     <div key={step} className="round-node">
                       <span className="node-num">0{i + 1}</span>
@@ -164,7 +202,7 @@ const Event3 = () => {
                       <div className="node-line" />
                     </div>
                   ))}
-                </div>
+                </div> */}
               </motion.div>
             </div>
 
@@ -211,7 +249,7 @@ const Event3 = () => {
       </AnimatePresence>
 
       <style jsx>{`
-        .mission-control {
+             .mission-control {
           background: #020204;
           min-height: 100vh;
           color: #fff;
@@ -234,7 +272,7 @@ const Event3 = () => {
         }
 
 
-         .stat-card {
+        .stat-card {
   text-decoration: none;
   color: inherit;
 }
@@ -245,10 +283,24 @@ const Event3 = () => {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .interface-layer {
+    height: auto;
+    padding-bottom: 120px; /* space for buttons */
+  }
+}
+
+@media (hover: none) {
+  .cursor-spotlight {
+    display: none;
+  }
+}
+
+
         .interface-layer {
           position: relative; z-index: 10;
           max-width: 1400px; margin: 0 auto;
-          padding: 40px; height: 100vh;
+          padding: 40px;min-height: 100svh;
           display: flex; flex-direction: column;
           justify-content: space-between;
         }
@@ -266,26 +318,14 @@ const Event3 = () => {
 
         /* --- Hero Grid --- */
         .hero-grid {
-          display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+          display: grid; grid-template-columns: 1fr 1fr;gap: clamp(32px, 6vw, 80px); align-items: center;
           padding: 40px 0;
         }
-
-        .stat-card {
-  text-decoration: none;
-  color: inherit;
-}
-
-.stat-card:hover,
-.stat-card:focus,
-.stat-card:active {
-  text-decoration: none;
-}
-
 
         /* --- The Poster --- */
         .poster-wrapper { position: relative; transform-style: preserve-3d; }
         .poster-frame {
-          aspect-ratio: 707/471; background: #111; border-radius: 4px;
+          aspect-ratio: 16/9.3; background: #111; border-radius: 4px;
           padding: 12px; border: 1px solid rgba(255,255,255,0.1);
           box-shadow: 0 50px 100px rgba(0,0,0,0.8);
           position: relative; overflow: hidden;
@@ -312,6 +352,34 @@ const Event3 = () => {
         .node-num { font-family: monospace; color: #00ffff; font-size: 0.7rem; }
         .node-name { font-size: 0.6rem; letter-spacing: 1px; color: #555; }
         .node-line { height: 1px; background: rgba(0,255,255,0.1); width: 100%; margin-top: 10px; }
+/* --- Event Details Block --- */
+.intel-event-details {
+  margin-bottom: 2rem;
+  border-left: 2px solid rgba(0,255,255,0.25);
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 800;   /* ← makes DATE bold */
+}
+
+
+.detail-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #00ffff;
+}
 
         /* --- Footer & Buttons --- */
         .power-footer { display: flex; justify-content: space-between; align-items: center; }
@@ -327,11 +395,52 @@ const Event3 = () => {
 
         /* --- Buttons --- */
 
-        .action-bar {
+      .action-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: rgba(2,2,4,0.9);
+    backdrop-filter: blur(10px);
+    padding: 12px 16px;
+    z-index: 20;
+
+    flex-direction: column;
+  }
+
+  .btn-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-secondary-glass,
+  .btn-primary-emerald {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster-frame {
+    padding: 8px;
+  }
+
+  .poster-wrapper {
+    transform: none !important;
+  }
+}
+.intel-title {
+  font-size: clamp(1.8rem, 6vw, 3rem);
 }
 
 .btn-group {
@@ -353,7 +462,7 @@ const Event3 = () => {
 .btn-back {
   background: none;
   border: none;
-  color: #444;
+  color: #ffffff;
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;

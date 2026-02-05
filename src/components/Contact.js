@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="page-wrapper">
+    <div id="contact" className="page-wrapper">
       {/* Injecting CSS directly here for a single-file "100x working" solution */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap');
@@ -96,28 +96,55 @@ const Contact = () => {
         }
 
         /* CONTACT ITEMS */
-        .contact-list {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-        }
+  .contact-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 20px;
 
-        .contact-item {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-          padding: 15px;
-          border-radius: 12px;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          transition: all 0.3s ease;
-        }
+  align-items: start;
 
-        .contact-item:hover {
-          background: rgba(0, 242, 254, 0.05);
-          border-color: rgba(0, 242, 254, 0.3);
-          transform: translateX(10px);
-        }
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+
+@media (max-width: 900px) {
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+@media (max-width: 900px) {
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+      .contact-item:hover {
+  background: rgba(0, 242, 254, 0.05);
+  border-color: rgba(0, 242, 254, 0.3);
+}
+
+
+      
 
         .icon-box {
           width: 50px;
@@ -212,25 +239,39 @@ const Contact = () => {
             <p className="subtitle">Ready to engineer the future? Connect with the Cognivista team.</p>
           </motion.div>
 
-          <div className="contact-list">
+          <motion.div
+            className="contact-list"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.25 }
+              }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <ContactItem
               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>}
               label="SOCIAL FEED"
               value="cognivista_26"
+              link="https://instagram.com/cognivista_26"
             />
 
             <ContactItem
               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>}
               label="COMMUNICATION LINK"
               value="Cognivista26@gmail.com"
+              link="mailto:Cognivista26@gmail.com"
             />
 
             <ContactItem
               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>}
               label="BASE COORDINATES"
               value="MNM Jain Engineering College"
+              link="https://maps.app.goo.gl/UdywxCqyEbzV5aiY6"
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* RIGHT SIDE: MAP */}
@@ -246,7 +287,7 @@ const Contact = () => {
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           ></iframe>
-          
+
         </div>
       </motion.div>
     </div>
@@ -254,24 +295,27 @@ const Contact = () => {
 };
 
 // Helper Component for List Items with Motion
-const ContactItem = ({ icon, label, value }) => {
+const ContactItem = ({ icon, label, value, link }) => {
   return (
-    <motion.div
+    <motion.a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className="contact-item"
       variants={{
         hidden: { opacity: 0, x: -20 },
         visible: { opacity: 1, x: 0 }
       }}
+      style={{ textDecoration: "none" }}
     >
-      <div className="icon-box">
-        {icon}
-      </div>
+      <div className="icon-box">{icon}</div>
       <div className="item-details">
         <h4>{label}</h4>
         <p>{value}</p>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
+
 
 export default Contact;
