@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+
+
 
 const NAV_ITEMS = [
   { label: 'Home', href: '#home' },
@@ -9,9 +13,8 @@ const NAV_ITEMS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [active, setActive] = useState('Home');
+  const [active, setActive] = useState('');
 
-  // Handle Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -20,13 +23,27 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle Navigation Click
-  const handleNavClick = (label, href) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (label, id) => {
     setActive(label);
     setMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+    if (location.pathname !== '/') {
+      navigate('/');
+
+      setTimeout(() => {
+        const el = document.querySelector(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+    } else {
+      const el = document.querySelector(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -188,7 +205,7 @@ function Navbar() {
       `}</style>
 
       <nav className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
-        
+
         {/* LOGO */}
         <div className="nav-logo" onClick={() => handleNavClick('Home', '#home')}>
           Cognivista<span>’26</span>

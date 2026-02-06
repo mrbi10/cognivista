@@ -39,7 +39,7 @@ const Footer = () => {
           align-items: center;
           gap: 20px;
           position: relative;
-          z-index: 10;
+          z-index: 5;
         }
 
         .college-name {
@@ -113,22 +113,6 @@ const Footer = () => {
   );
 };
 
-// Helper for clean icons
-const FooterIcon = ({ children }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="20" 
-    height="20" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-    className="social-icon"
-  >
-    {children}
-  </svg>
-);
+
 
 export default Footer;

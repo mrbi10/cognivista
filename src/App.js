@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// 1. Import the new background component
 import ParticlesBackground from './components/ParticlesBackground';
 
 import Navbar from './components/Navbar';

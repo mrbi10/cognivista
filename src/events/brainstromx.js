@@ -11,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 import brainstromximg from "../../src/assets/images/brainstromx.png"
 
 
-// --- Advanced Animation Profiles ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -37,7 +36,6 @@ const Event4 = () => {
   const posterRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Mouse Tracking for Spotlight & Parallax
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
@@ -71,7 +69,6 @@ const Event4 = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Vanta.js Initialization
     const initVanta = () => {
       if (window.VANTA?.NET && window.THREE && !vantaEffect.current) {
         vantaEffect.current = window.VANTA.NET({
@@ -121,7 +118,7 @@ const Event4 = () => {
                 <span className="terminal-text">ID: ESC_LOG_77</span>
                 <div className="status-badge"><span className="pulse-dot" /> SYSTEM_LIVE</div>
               </div> */}
-              <div className="nav-group logo-main">BRAINSTORM X</div>
+              {/* <div className="nav-group logo-main">BRAINSTORM X</div> */}
               {/* <div className="nav-group text-right">
                 <span className="terminal-text">PORT: 8081</span>
               </div> */}
@@ -514,6 +511,35 @@ const Event4 = () => {
   margin-left: 8px;
   font-weight: 800;
 }
+  /* ===== MOBILE FIX PACK ===== */
+
+.mission-control {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .interface-layer {
+    padding-bottom: 200px;
+  }
+
+  .hero-grid {
+    gap: 24px;
+    padding: 20px 0;
+  }
+
+  .intel-desc {
+    max-width: 100%;
+  }
+
+  .btn-back,
+  .btn-secondary-glass,
+  .btn-primary-emerald {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+}
+
 
       `}</style>
     </div>

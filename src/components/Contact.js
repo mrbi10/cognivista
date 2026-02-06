@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ParticlesBackground from './ParticlesBackground'; // Assuming this exists in your project
+import ParticlesBackground from './ParticlesBackground'; 
 
 const Contact = () => {
-  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -20,7 +19,6 @@ const Contact = () => {
 
   return (
     <div id="contact" className="page-wrapper">
-      {/* Injecting CSS directly here for a single-file "100x working" solution */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap');
 
@@ -294,7 +292,6 @@ const Contact = () => {
   );
 };
 
-// Helper Component for List Items with Motion
 const ContactItem = ({ icon, label, value, link }) => {
   return (
     <motion.a

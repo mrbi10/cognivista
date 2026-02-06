@@ -12,7 +12,6 @@ import codecureimg from "../../src/assets/images/codecure.png"
 
 
 
-// --- Advanced Animation Profiles ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -38,7 +37,7 @@ const Event3 = () => {
   const posterRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Mouse Tracking for Spotlight & Parallax
+ 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
@@ -72,7 +71,7 @@ const Event3 = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Vanta.js Initialization
+    
     const initVanta = () => {
       if (window.VANTA?.NET && window.THREE && !vantaEffect.current) {
         vantaEffect.current = window.VANTA.NET({
@@ -122,7 +121,7 @@ const Event3 = () => {
                 <span className="terminal-text">ID: ESC_LOG_77</span>
                 <div className="status-badge"><span className="pulse-dot" /> SYSTEM_LIVE</div>
               </div> */}
-              <div className="nav-group logo-main">CODE CURE</div>
+              {/* <div className="nav-group logo-main">CODE CURE</div> */}
               {/* <div className="nav-group text-right">
                 <span className="terminal-text">PORT: 8081</span>
               </div> */}
@@ -447,6 +446,14 @@ const Event3 = () => {
   display: flex;
   gap: 20px;
 }
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
 .btn-back,
 .btn-secondary-glass,
 .btn-primary-emerald {
@@ -464,6 +471,13 @@ const Event3 = () => {
   border: none;
   color: #ffffff;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s; background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 40px;
+  border-radius: 4px;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -488,7 +502,6 @@ const Event3 = () => {
   background: rgba(255,255,255,0.1);
   border-color: #fff;
 }
-
 .btn-primary-emerald {
   background: #00ffff;
   color: #000;
@@ -514,6 +527,35 @@ const Event3 = () => {
   margin-left: 8px;
   font-weight: 800;
 }
+  /* ===== MOBILE FIX PACK ===== */
+
+.mission-control {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .interface-layer {
+    padding-bottom: 200px;
+  }
+
+  .hero-grid {
+    gap: 24px;
+    padding: 20px 0;
+  }
+
+  .intel-desc {
+    max-width: 100%;
+  }
+
+  .btn-back,
+  .btn-secondary-glass,
+  .btn-primary-emerald {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+}
+
 
       `}</style>
     </div>

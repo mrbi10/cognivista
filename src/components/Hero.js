@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Countdown from './Countdown'; // Assuming you have this component
+import Countdown from './Countdown';
 
 const Hero = () => {
-  // Animation Variants for Staggered Entrance
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -336,7 +335,7 @@ const Hero = () => {
 
         <motion.p variants={itemVariants} className="hero-desc">
           Cognivista 2026 is a National Level Technical Symposium conducted by
-          MNMJEC, Chennai, bringing together students from across Tamil Nadu
+          MNMJEC, Chennai, bringing together students from across Tamil Nadu and other states
           for technical events and innovation.
         </motion.p>
 

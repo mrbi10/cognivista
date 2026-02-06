@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-// --- HELPER FUNCTIONS ---
 function pad(num) {
   return String(num).padStart(2, '0');
 }
 
-// Logic: Set target date as Feb 13
 function getTargetDate() {
   const now = new Date();
-  let target = new Date(now.getFullYear(), 1, 13); // Month is 0-based (1 = Feb)
+  let target = new Date(now.getFullYear(), 1, 13);
 
-  // If Feb 13 already passed this year, move to next year
   if (target < now) {
     target = new Date(now.getFullYear() + 1, 1, 13);
   }
@@ -32,7 +29,6 @@ function getTimeLeft(targetDate) {
   return { days, hours, minutes, seconds };
 }
 
-// --- MAIN COMPONENT ---
 const Countdown = () => {
   const targetDate = getTargetDate();
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
