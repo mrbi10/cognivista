@@ -159,14 +159,41 @@ function Navbar() {
 }
 
 
+.desktop-only {
+  display: inline;
+}
+
+.mobile-only {
+  display: none;
+}
 
 @media (max-width: 768px) {
-  .college-name {
+  .desktop-only {
     display: none;
   }
 
+  .mobile-only {
+    display: inline;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 6px rgba(0,242,254,0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-left {
+    gap: 8px;
+  }
+
   .college-logo {
-    height: 38px;
+    height: 36px;
+  }
+
+  .mobile-only {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
 }
 
@@ -309,8 +336,11 @@ function Navbar() {
             alt="College Logo"
             className="college-logo"
           />
-          <span className="college-name">
+          <span className="college-name desktop-only">
             MISRIMAL NAVAJEE MUNOTH JAIN ENGINEERING COLLEGE
+          </span>
+          <span className="college-name mobile-only">
+            MNMJEC
           </span>
         </div>
 
