@@ -246,6 +246,7 @@ const Hero = () => {
   font-size: clamp(0.9rem, 3vw, 1.2rem);
   font-weight: 600;
   letter-spacing: clamp(2px, 2vw, 6px);
+   margin-top: 50px; 
   margin-bottom: clamp(6px, 2vw, 12px);
 }
 
@@ -319,7 +320,7 @@ const Hero = () => {
 
         {/* Subtitle */}
         <motion.p variants={itemVariants} className="hero-subtitle">
-          LET’S VIBE WITH US
+          NATIONAL LEVEL TECH SYMPOSIUM
         </motion.p>
 
         {/* Main Title */}
@@ -349,7 +350,12 @@ const Hero = () => {
         <motion.div variants={itemVariants} className="cta-group">
           <button
             className="btn btn-primary"
-            onClick={() => alert('Registration Portal Opening Soon!')}
+            onClick={() => {
+              const el = document.querySelector('#events');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
           >
             Register Now
           </button>

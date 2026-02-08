@@ -37,7 +37,7 @@ const Event3 = () => {
   const posterRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
- 
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
@@ -71,7 +71,7 @@ const Event3 = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    
+
     const initVanta = () => {
       if (window.VANTA?.NET && window.THREE && !vantaEffect.current) {
         vantaEffect.current = window.VANTA.NET({
@@ -183,15 +183,18 @@ const Event3 = () => {
 
                 <div className="intel-stats">
                   <a
-                    href="tel:8870138290"
+                    href="tel:9445521080"
                     className="stat-card cursor-pointer no-underline text-inherit"
                   >
                     <span className="label">CONTACT</span>
-                    <span className="value text-cyan"> 9445521080</span>
+                    <span className="value text-cyan">
+                      9445521080 <br />
+                      <span style={{ fontSize: '0.85em', opacity: 0.85 }}>
+                        Iniyan&nbsp;&nbsp;CSE&nbsp;&nbsp;3<sup>rd</sup>&nbsp;yr
+                      </span>
+                    </span>
                   </a>
                 </div>
-
-
 
                 {/* <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (

@@ -143,7 +143,7 @@ const Event4 = () => {
                     <div className="scanline" />
                     <div className="ui-overlay-elements">
                       <div className="corner-tl" /> <div className="corner-br" />
-                      
+
                     </div>
                   </div>
                 </div>
@@ -176,11 +176,16 @@ const Event4 = () => {
                 {/* ===== END BLOCK ===== */}
                 <div className="intel-stats">
                   <a
-                    href="tel:8870138290"
+                    href="tel:9940324922"
                     className="stat-card cursor-pointer no-underline text-inherit"
                   >
                     <span className="label">CONTACT</span>
-                    <span className="value text-cyan">9940324922</span>
+                    <span className="value text-cyan">
+                      9940324922 <br />
+                      <span style={{ fontSize: '0.85em', opacity: 0.85 }}>
+                        Lourdhu Priscilla&nbsp;&nbsp;CSBS&nbsp;&nbsp;3<sup>rd</sup>&nbsp;yr
+                      </span>
+                    </span>
                   </a>
                 </div>
                 {/* <div className="round-sequence">

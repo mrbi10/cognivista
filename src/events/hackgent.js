@@ -37,7 +37,7 @@ const Event2 = () => {
   const posterRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
- 
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
@@ -48,18 +48,18 @@ const Event2 = () => {
 
 
   useEffect(() => {
-  if (window.matchMedia("(hover: none)").matches) return;
+    if (window.matchMedia("(hover: none)").matches) return;
 
-  const handleMouseMove = (e) => {
-    const moveX = e.clientX - window.innerWidth / 2;
-    const moveY = e.clientY - window.innerHeight / 2;
-    mouseX.set(moveX);
-    mouseY.set(moveY);
-  };
+    const handleMouseMove = (e) => {
+      const moveX = e.clientX - window.innerWidth / 2;
+      const moveY = e.clientY - window.innerHeight / 2;
+      mouseX.set(moveX);
+      mouseY.set(moveY);
+    };
 
-  window.addEventListener("mousemove", handleMouseMove);
-  return () => window.removeEventListener("mousemove", handleMouseMove);
-}, []);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const Event2 = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    
+
     const initVanta = () => {
       if (window.VANTA?.NET && window.THREE && !vantaEffect.current) {
         vantaEffect.current = window.VANTA.NET({
@@ -147,7 +147,7 @@ const Event2 = () => {
                     <div className="scanline" />
                     <div className="ui-overlay-elements">
                       <div className="corner-tl" /> <div className="corner-br" />
-                      
+
                     </div>
                   </div>
                 </div>
@@ -160,35 +160,39 @@ const Event2 = () => {
                   <h2 className="intel-title">HACKGENT</h2>
                   <p className="intel-desc">HACKGENT is about pushing boundaries, experimenting boldly, and creating solutions that matter.</p>
                 </div>
-                  {/* ===== ADD THIS BLOCK RIGHT HERE ===== */}
-<div className="intel-event-details">
-  <div className="detail-row">
-    <span className="detail-label">DATE</span>
-    <span className="detail-value">13 <sup>th</sup> Feb 2026</span>
-  </div>
+                {/* ===== ADD THIS BLOCK RIGHT HERE ===== */}
+                <div className="intel-event-details">
+                  <div className="detail-row">
+                    <span className="detail-label">DATE</span>
+                    <span className="detail-value">13 <sup>th</sup> Feb 2026</span>
+                  </div>
 
-  <div className="detail-row">
-    <span className="detail-label">TIME</span>
-    <span className="detail-value">10:30 AM – 12:00 PM</span>
-  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">TIME</span>
+                    <span className="detail-value">10:30 AM – 12:00 PM</span>
+                  </div>
 
-  <div className="detail-row">
-    <span className="detail-label">VENUE</span>
-    <span className="detail-value"> ECE SMART ROOM</span>
-  </div>
-</div>
-{/* ===== END BLOCK ===== */}
+                  <div className="detail-row">
+                    <span className="detail-label">VENUE</span>
+                    <span className="detail-value"> ECE SMART ROOM</span>
+                  </div>
+                </div>
+                {/* ===== END BLOCK ===== */}
 
                 <div className="intel-stats">
                   <a
-                    href="tel:8870138290"
+                    href="tel:9884171286"
                     className="stat-card cursor-pointer no-underline text-inherit"
                   >
                     <span className="label">CONTACT</span>
-                    <span className="value text-cyan">9884171286</span>
+                    <span className="value text-cyan">
+                      9884171286 <br />
+                      <span style={{ fontSize: '0.85em', opacity: 0.85 }}>
+                        Vijay&nbsp;&nbsp;ADS&nbsp;&nbsp;3<sup>rd</sup>&nbsp;yr
+                      </span>
+                    </span>
                   </a>
                 </div>
-
 
                 {/* <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (

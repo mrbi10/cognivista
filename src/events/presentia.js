@@ -37,7 +37,7 @@ const Event1 = () => {
   const posterRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
- 
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
@@ -72,7 +72,7 @@ const Event1 = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    
+
     const initVanta = () => {
       if (window.VANTA?.NET && window.THREE && !vantaEffect.current) {
         vantaEffect.current = window.VANTA.NET({
@@ -186,11 +186,14 @@ const Event1 = () => {
                     className="stat-card cursor-pointer no-underline text-inherit"
                   >
                     <span className="label">CONTACT</span>
-                    <span className="value text-cyan">8870138290</span>
+                    <span className="value text-cyan">
+                      8870138290 <br />
+                      <span style={{ fontSize: '0.85em', opacity: 0.85 }}>
+                        Derlin Mano  &nbsp;&nbsp;IT&nbsp;&nbsp; 4<sup>th</sup>&nbsp;year
+                      </span>
+                    </span>
                   </a>
                 </div>
-
-
 
                 {/* <div className="round-sequence">
                   {["ENCRYPT", "TRACE", "DECODE", "EXPLOIT", "ESCAPE"].map((step, i) => (

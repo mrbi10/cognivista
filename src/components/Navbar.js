@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-
-
-
+import collegeLogo from '../assets/images/collegelogo.png';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '#home' },
@@ -80,16 +78,113 @@ function Navbar() {
         }
 
         /* LOGO */
-        .nav-logo {
-          font-size: 1.8rem;
-          font-weight: 800;
-          color: #fff;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          cursor: pointer;
-          position: relative;
-          z-index: 1002;
-        }
+       /* LEFT TEXT */
+.nav-left {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 1002;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.6px;
+  z-index: 1002;
+}
+
+/* LOGO IMAGE */
+.college-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+
+  border-radius: 10px;   
+  background: rgba(255, 255, 255, 0.05); 
+  padding: 4px;          
+
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.35));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+/* Optional subtle hover polish */
+.nav-left:hover .college-logo {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.6));
+}
+
+.college-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.85);
+
+  /* subtle cyan accent */
+  text-shadow: 0 0 6px rgba(0, 242, 254, 0.15);
+
+  line-height: 1.2;
+}
+
+.nav-left:hover .college-name {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.4),
+    0 0 12px rgba(0, 242, 254, 0.25);
+}
+.nav-left::after {
+  content: '';
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .nav-left::after {
+    display: block;
+    width: 1px;
+    height: 28px;
+    margin-left: 8px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 242, 254, 0.4),
+      transparent
+    );
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .college-name {
+    display: none;
+  }
+
+  .college-logo {
+    height: 38px;
+  }
+}
+
+/* CENTER LOGO */
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  borderRadius:10;
+  position: absolute;   
+  left: 50%;            
+  transform: translateX(-50%); 
+  z-index: 1002;
+}
+        
         
         .nav-logo span {
           color: #00f2fe;
@@ -207,9 +302,26 @@ function Navbar() {
       <nav className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
 
         {/* LOGO */}
-        <div className="nav-logo" onClick={() => handleNavClick('Home', '#home')}>
-          Cognivista<span>’26</span>
+        {/* LEFT — MNMJEC */}
+        <div className="nav-left">
+          <img
+            src={collegeLogo}
+            alt="College Logo"
+            className="college-logo"
+          />
+          <span className="college-name">
+            MISRIMAL NAVAJEE MUNOTH JAIN ENGINEERING COLLEGE
+          </span>
         </div>
+
+        {/* CENTER — LOGO */}
+        {/* <div
+  className="nav-logo"
+  onClick={() => handleNavClick('Home', '#home')}
+>
+  Cognivista<span>’26</span>
+</div> */}
+
 
         {/* LINKS */}
         <ul className={`nav-links ${menuOpen ? 'menu-open' : ''}`}>
