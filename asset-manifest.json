@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.c3befe51.css",
-    "main.js": "/static/js/main.947628a1.js",
+    "main.js": "/static/js/main.69038e67.js",
     "static/media/hackgent.png": "/static/media/hackgent.b4699366f8d1f2763ba0.png",
     "static/media/codecure.png": "/static/media/codecure.f6715c97871f02d92399.png",
     "static/media/presentia.png": "/static/media/presentia.68af9474febe609cd239.png",
     "static/media/brainstromx.png": "/static/media/brainstromx.a5411f522b215f1a5b0c.png",
-    "static/media/banner.jpeg": "/static/media/banner.f95a7f70acc0a8fed5b2.jpeg",
+    "static/media/banner.jpeg": "/static/media/banner.3a9f7b37ba1679b55bea.jpeg",
     "static/media/collegelogo.png": "/static/media/collegelogo.74dbc04b1166c0018f13.png",
     "index.html": "/index.html",
     "main.c3befe51.css.map": "/static/css/main.c3befe51.css.map",
-    "main.947628a1.js.map": "/static/js/main.947628a1.js.map"
+    "main.69038e67.js.map": "/static/js/main.69038e67.js.map"
   },
   "entrypoints": [
     "static/css/main.c3befe51.css",
-    "static/js/main.947628a1.js"
+    "static/js/main.69038e67.js"
   ]
 }
